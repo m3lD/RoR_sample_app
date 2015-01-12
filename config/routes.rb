@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get 'login'     => 'sessions#new'                   # Page for a new session
     post 'login'    => 'sessions#create'                # Create a new session
     delete 'logout' => 'sessions#destroy'               # Delete a session
-    
     resources :users
+    resources :account_activations, only: [:edit]
+    
 end
