@@ -16,13 +16,12 @@ gem 'bootstrap-will_paginate'
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
-
+gem 'sqlite3'
 
 group :development, :test do
   gem 'byebug',      '3.4.0'
   gem 'web-console', '2.0.0.beta3'
   gem 'spring'
-  gem 'sqlite3'
 end
 
 group :test do
