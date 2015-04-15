@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>User</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>     
+    <div class="banner">
+        
+        <h1>
+            <span class="type">Class</span> 
+            User 
+            
+                <span class="parent">&lt; 
+                    
+                    ActiveRecord::Base
+                    
+                </span>
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../files/app/models/user_rb.html">app/models/user.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>A</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-activate">activate</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-authenticated-3F">authenticated?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>C</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-create_reset_digest">create_reset_digest</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>D</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-digest">digest</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>F</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-feed">feed</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-forget">forget</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new_token">new_token</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-password_reset_expired-3F">password_reset_expired?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-remember">remember</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>S</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-send_activation_email">send_activation_email</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-send_password_reset_email">send_password_reset_email</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <div class="sectiontitle">Constants</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">VALID_EMAIL_REGEX</td>
+            <td>=</td>
+            <td class="attr-value">/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <div class="sectiontitle">Attributes</div>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>activation_token</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>remember_token</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [RW]
+            </td>
+            <td class='attr-name'>reset_token</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <div class="sectiontitle">Class Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-c-digest">
+            
+              <b>digest</b>(string)
+            
+            <a href="../classes/User.html#method-c-digest" name="method-c-digest" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns the hash digest of the given string</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-digest_source')" id="l_method-c-digest_source">show</a>
+                
+              </p>
+              <div id="method-c-digest_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">User</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">string</span>)
+    <span class="ruby-identifier">cost</span> = <span class="ruby-constant">ActiveModel</span><span class="ruby-operator">::</span><span class="ruby-constant">SecurePassword</span>.<span class="ruby-identifier">min_cost</span> <span class="ruby-operator">?</span> <span class="ruby-constant">BCrypt</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">MIN_COST</span> <span class="ruby-operator">:</span>
+                                              <span class="ruby-constant">BCrypt</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>.<span class="ruby-identifier">cost</span>
+    <span class="ruby-constant">BCrypt</span><span class="ruby-operator">::</span><span class="ruby-constant">Password</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">cost</span><span class="ruby-operator">:</span> <span class="ruby-identifier">cost</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-c-new_token">
+            
+              <b>new_token</b>()
+            
+            <a href="../classes/User.html#method-c-new_token" name="method-c-new_token" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns a random token</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-c-new_token_source')" id="l_method-c-new_token_source">show</a>
+                
+              </p>
+              <div id="method-c-new_token_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">User</span>.<span class="ruby-identifier">new_token</span>
+    <span class="ruby-constant">SecureRandom</span>.<span class="ruby-identifier">urlsafe_base64</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                  
+      <div class="sectiontitle">Instance Public methods</div>
+      
+        <div class="method">
+          <div class="title method-title" id="method-i-activate">
+            
+              <b>activate</b>()
+            
+            <a href="../classes/User.html#method-i-activate" name="method-i-activate" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Activates an account.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-activate_source')" id="l_method-i-activate_source">show</a>
+                
+              </p>
+              <div id="method-i-activate_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">activate</span>
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:activated</span>, <span class="ruby-keyword">true</span>)
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:activated_at</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">zone</span>.<span class="ruby-identifier">now</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-authenticated-3F">
+            
+              <b>authenticated?</b>(attribute, token)
+            
+            <a href="../classes/User.html#method-i-authenticated-3F" name="method-i-authenticated-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if the given token matches the digest</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-authenticated-3F_source')" id="l_method-i-authenticated-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-authenticated-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">authenticated?</span>(<span class="ruby-identifier">attribute</span>, <span class="ruby-identifier">token</span>)
+    <span class="ruby-identifier">digest</span> = <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{attribute}_digest&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">digest</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-constant">BCrypt</span><span class="ruby-operator">::</span><span class="ruby-constant">Password</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">digest</span>).<span class="ruby-identifier">is_password?</span>(<span class="ruby-identifier">token</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-create_reset_digest">
+            
+              <b>create_reset_digest</b>()
+            
+            <a href="../classes/User.html#method-i-create_reset_digest" name="method-i-create_reset_digest" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Sets the password reset attributes.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-create_reset_digest_source')" id="l_method-i-create_reset_digest_source">show</a>
+                
+              </p>
+              <div id="method-i-create_reset_digest_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">create_reset_digest</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reset_token</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new_token</span>
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:reset_digest</span>, <span class="ruby-constant">User</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">reset_token</span>))
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:reset_sent_at</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">zone</span>.<span class="ruby-identifier">now</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-feed">
+            
+              <b>feed</b>()
+            
+            <a href="../classes/User.html#method-i-feed" name="method-i-feed" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Defines a proto-feed. See “Following users” for the full implementation.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-feed_source')" id="l_method-i-feed_source">show</a>
+                
+              </p>
+              <div id="method-i-feed_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">feed</span>
+    <span class="ruby-constant">Micropost</span>.<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;user_id = ?&quot;</span>, <span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-forget">
+            
+              <b>forget</b>()
+            
+            <a href="../classes/User.html#method-i-forget" name="method-i-forget" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Forgets a user</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-forget_source')" id="l_method-i-forget_source">show</a>
+                
+              </p>
+              <div id="method-i-forget_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">forget</span>
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:remember_digest</span>, <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-password_reset_expired-3F">
+            
+              <b>password_reset_expired?</b>()
+            
+            <a href="../classes/User.html#method-i-password_reset_expired-3F" name="method-i-password_reset_expired-3F" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Returns true if a password reset has expired</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-password_reset_expired-3F_source')" id="l_method-i-password_reset_expired-3F_source">show</a>
+                
+              </p>
+              <div id="method-i-password_reset_expired-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">password_reset_expired?</span>
+    <span class="ruby-identifier">reset_sent_at</span> <span class="ruby-operator">&lt;</span> <span class="ruby-number">2</span>.<span class="ruby-identifier">hours</span>.<span class="ruby-identifier">ago</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-remember">
+            
+              <b>remember</b>()
+            
+            <a href="../classes/User.html#method-i-remember" name="method-i-remember" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Remembers a user in the database for use in persistent sessions.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-remember_source')" id="l_method-i-remember_source">show</a>
+                
+              </p>
+              <div id="method-i-remember_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">remember</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">remember_token</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">new_token</span>
+    <span class="ruby-identifier">update_attribute</span>(<span class="ruby-value">:remember_digest</span>, <span class="ruby-constant">User</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">remember_token</span>))
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_activation_email">
+            
+              <b>send_activation_email</b>()
+            
+            <a href="../classes/User.html#method-i-send_activation_email" name="method-i-send_activation_email" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Sends activation email.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_activation_email_source')" id="l_method-i-send_activation_email_source">show</a>
+                
+              </p>
+              <div id="method-i-send_activation_email_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_activation_email</span>
+    <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">account_activation</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <div class="title method-title" id="method-i-send_password_reset_email">
+            
+              <b>send_password_reset_email</b>()
+            
+            <a href="../classes/User.html#method-i-send_password_reset_email" name="method-i-send_password_reset_email" class="permalink">Link</a>
+          </div>
+          
+          
+            <div class="description">
+              <p>Sends password reset email.</p>
+            </div>
+          
+          
+          
+
+          
+          
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                Source: 
+                <a href="javascript:toggleSource('method-i-send_password_reset_email_source')" id="l_method-i-send_password_reset_email_source">show</a>
+                
+              </p>
+              <div id="method-i-send_password_reset_email_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File app/models/user.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword ruby-title">send_password_reset_email</span>
+    <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">password_reset</span>(<span class="ruby-keyword">self</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+                    </div>
+
+    </div>
+  </body>
+</html>    
