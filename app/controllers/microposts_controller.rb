@@ -3,6 +3,7 @@ class MicropostsController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
     before_action :correct_user, only: :destroy
     
+    # Crea un nuevo micropost
     def create
         @micropost = current_user.microposts.build(micropost_params)
         if @micropost.save
@@ -14,10 +15,10 @@ class MicropostsController < ApplicationController
         end
     end
     
+    # Elimina un micropost y redirige a url anterior o a root si es nula
     def destroy
         @micropost.destroy
         flash[:success] = "Micropost deleted"
-        #Previous URL, if it's nil then go to root_url
         redirect_to request.referrer || root_url
     end
     
@@ -27,6 +28,7 @@ class MicropostsController < ApplicationController
             params.require(:micropost).permit(:content, :picture)
         end
     
+        # Corrobora que el usuario actual tenga un micropost con el id actual 
         def correct_user
             @micropost = current_user.microposts.find_by(id: params[:id])
             redirect_to root_url if @micropost.nil?
