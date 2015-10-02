@@ -1,1 +1,1 @@
-Tweety App - Clon del servicio de microblogging mas popular.
+Tweety App - Clon de Twitter desarrollado con Ruby on Rails.
